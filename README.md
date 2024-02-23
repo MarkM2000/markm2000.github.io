@@ -1,2 +1,2 @@
 # markm2000.github.io
-Repository that contains previous projects I did.
+This repository will contain my Github portfolio. It will include files that I have decided to use for the portfolio.
