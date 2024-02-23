@@ -2,205 +2,205 @@
 <html>
 
 <head>
-  <meta charset=utf-8 />
-  <title>Lab 8: Denver home location exercise</title>
-  <meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no' />
-  <!-- Is the is the latest version of Leaflet? -->
-  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
-  <link href="https://fonts.googleapis.com/css?family=Mukta:300,400,700" rel="stylesheet">
+    <meta charset=utf-8 />
+    <title>Lab 8: Denver home location exercise</title>
+    <meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no' />
+    <!-- Is the is the latest version of Leaflet? -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
+    <link href="https://fonts.googleapis.com/css?family=Mukta:300,400,700" rel="stylesheet">
 
-  <style>
-    body {
-      margin: 0;
-      padding: 0;
-      background: rgb(43, 43, 43);
-      font-family: "Mukta", sans-serif;
-      font-size: 100%;
-      font-weight: 300;
-      color: rgb(172, 172, 172);
-    }
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background: rgb(43, 43, 43);
+            font-family: "Mukta", sans-serif;
+            font-size: 100%;
+            font-weight: 300;
+            color: rgb(172, 172, 172);
+        }
 
-    header,
-    footer,
-    section {
-      padding: 6px 10%;
-      margin: 0 auto;
-      width: 80%
-    }
+        header,
+        footer,
+        section {
+            padding: 6px 10%;
+            margin: 0 auto;
+            width: 80%
+        }
 
-    h1 {
-      display: inline-block;
-      margin-right: 20px;
-      color: rgb(0, 53, 133);
-      font-family: "Mukta", sans-serif;
-      font-size: 3.5em;
-      font-weight: 700;
-    }
+        h1 {
+            display: inline-block;
+            margin-right: 20px;
+            color: rgb(0, 53, 133);
+            font-family: "Mukta", sans-serif;
+            font-size: 3.5em;
+            font-weight: 700;
+        }
 
-    h2 {
-      display: inline-block;
-      color: rgba(255, 102, 0);
-      letter-spacing: 0.05em;
-      margin-top: 0px;
-      font-family: "Mukta", sans-serif;
-      font-weight: 300;
-      text-transform: uppercase;
-      border-bottom: 1px dotted rgba(255, 200, 0, 0.5);
-      ;
-    }
+        h2 {
+            display: inline-block;
+            color: rgba(255, 102, 0);
+            letter-spacing: 0.05em;
+            margin-top: 0px;
+            font-family: "Mukta", sans-serif;
+            font-weight: 300;
+            text-transform: uppercase;
+            border-bottom: 1px dotted rgba(255, 200, 0, 0.5);
+            ;
+        }
 
-    #map {
-      width: 80%;
-      height: 540px;
-      margin: 10px auto;
-    }
+        #map {
+            width: 80%;
+            height: 540px;
+            margin: 10px auto;
+        }
 
-    p {
-      font-size: 1em;
-      color: rgba(170, 170, 170);
-      font-family: "Mukta", sans-serif;
-      font-weight: 300;
-      font-size: 1.2em;
-    }
+        p {
+            font-size: 1em;
+            color: rgba(170, 170, 170);
+            font-family: "Mukta", sans-serif;
+            font-weight: 300;
+            font-size: 1.2em;
+        }
 
-    a {
-      color: #004A8B;
-      font-weight: 400;
-      text-decoration: none;
-    }
-  </style>
+        a {
+            color: #004A8B;
+            font-weight: 400;
+            text-decoration: none;
+        }
+    </style>
 </head>
 
 <body>
-  <header>
-    <h1>New York City</h1>
-    <h2>Subways to Museums</h2>
-  </header>
+    <header>
+        <h1>New York City</h1>
+        <h2>Subways to Museums</h2>
+    </header>
 
-  <div id='map'></div>
+    <div id='map'></div>
 
-  <footer>
-    <p>Map authored by Mark Marji</p>
-    <p>This map will show the museums around the New York City area and which subway lines are best used to get to
-      whichever specific museum. For instance, subway lines 4-5-6 are the closest subway lines to the Metropolitan
-      Museum of Art. (<a href="https://nearestrailwaystation.com/the-metropolitan-museum-of-arts/">MTA Subway
-        Stations</a>)</a></p>
-  </footer>
-  <!-- Is the is the latest version of Leaflet? -->
-  <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
-  <script src="nyc-museums.js"></script>
-  <script src="subways.js"></script>
-  <script>
-    // map variables
-    var map = L.map('map', {
-      center: [40.712778, -74.006111],
-      zoom: 11,
-    });
-
-    var tiles = L.tileLayer('https://cartodb-basemaps-{s}.global.ssl.fastly.net/rastertiles/dark_all/{z}/{x}/{y}.png', {
-      attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a> &copy; <a href="http://cartodb.com/attributions">CartoDB</a>',
-      subdomains: 'abcd',
-      maxZoom: 19
-    });
-
-    tiles.addTo(map);
-
-    var commonStyles = {
-      weight: 1,
-      stroke: 1,
-      fillOpacity: .8
-    }
-
-    var subways = L.geoJson(subways, {
-      // pointToLayer: function (feature, latlng) {
-      //   return L.circleMarker(latlng, {
-      //     color: 'orange',
-      //     weight: 1,
-      //     // fillColor: '#0039A6',
-      //     // fillOpacity: .8,
-      //     // radius: 10
-      //   });
-      // },
-      onEachFeature: function (feature, layer) {
-        layer.bindTooltip(layer.feature.properties.name);
-        layer.setStyle({
-            color: '#0039A6'
-          });
-
-        layer.on('mouseover', function () {
-          // code goes in here
-          layer.setStyle({
-            color: 'red'
-          });
+    <footer>
+        <p>Map authored by Mark Marji</p>
+        <p>This map will show the museums around the New York City area and which subway lines are best used to get to
+            whichever specific museum. For instance, subway lines 4-5-6 are the closest subway lines to the Metropolitan
+            Museum of Art. (<a href="https://nearestrailwaystation.com/the-metropolitan-museum-of-arts/">MTA Subway
+                Stations</a>)</a></p>
+    </footer>
+    <!-- Is the is the latest version of Leaflet? -->
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+    <script src="nyc-museums.js"></script>
+    <script src="subways.js"></script>
+    <script>
+        // map variables
+        var map = L.map('map', {
+            center: [40.712778, -74.006111],
+            zoom: 11,
         });
-        layer.on('mouseout', function () {
-          // code goes in here
-          layer.setStyle({
-            color: '#0039A6'
-          });
+
+        var tiles = L.tileLayer('https://cartodb-basemaps-{s}.global.ssl.fastly.net/rastertiles/dark_all/{z}/{x}/{y}.png', {
+            attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a> &copy; <a href="http://cartodb.com/attributions">CartoDB</a>',
+            subdomains: 'abcd',
+            maxZoom: 19
         });
-      }
-    }).addTo(map);
 
-    // Steps to creating the layers
-    var museums = L.geoJson(museums, {
-      pointToLayer: function (feature, latlng) {
-        return L.circleMarker(latlng, {
-          color: '#613c33',
-          weight: 1,
-          fillColor: '#613c33',
-          fillOpacity: .8,
-          radius: 10
+        tiles.addTo(map);
+
+        var commonStyles = {
+            weight: 1,
+            stroke: 1,
+            fillOpacity: .8
+        }
+
+        var subways = L.geoJson(subways, {
+            // pointToLayer: function (feature, latlng) {
+            //   return L.circleMarker(latlng, {
+            //     color: 'orange',
+            //     weight: 1,
+            //     // fillColor: '#0039A6',
+            //     // fillOpacity: .8,
+            //     // radius: 10
+            //   });
+            // },
+            onEachFeature: function (feature, layer) {
+                layer.bindTooltip(layer.feature.properties.name);
+                layer.setStyle({
+                    color: '#0039A6'
+                });
+
+                layer.on('mouseover', function () {
+                    // code goes in here
+                    layer.setStyle({
+                        color: 'red'
+                    });
+                });
+                layer.on('mouseout', function () {
+                    // code goes in here
+                    layer.setStyle({
+                        color: '#0039A6'
+                    });
+                });
+            }
+        }).addTo(map);
+
+        // Steps to creating the layers
+        var museums = L.geoJson(museums, {
+            pointToLayer: function (feature, latlng) {
+                return L.circleMarker(latlng, {
+                    color: '#613c33',
+                    weight: 1,
+                    fillColor: '#613c33',
+                    fillOpacity: .8,
+                    radius: 10
+                });
+            },
+            onEachFeature: function (feature, layer) {
+                layer.bindTooltip(layer.feature.properties.name);
+
+                layer.on('mouseover', function () {
+                    // code goes in here
+                    layer.setStyle({
+                        fillColor: 'red'
+                    });
+                });
+                layer.on('mouseout', function () {
+                    // code goes in here
+                    layer.setStyle({
+                        fillColor: '#613c33'
+                    });
+                });
+            }
+        }).addTo(map);
+
+        // GeoJSon Layers
+        var sourcesLabels = {
+            "museums": museums,
+            "subways": subways
+        }
+
+        var sourcesLayers = {
+            "<b style='color:#613c33'>Museums</b>": museums,
+            "<b style='color:#0039A6'>Subways</b>": subways,
+        }
+
+        L.control.layers(null, sourcesLayers, {
+            collapsed: false
+        }).addTo(map);
+
+        // BEGIN WRITING YOUR SOLUTION CODE HERE
+        map.on('click', function (e) {
+            console.log(e.latlng) // access to the click coordinates
+            museums.eachLayer(function (layer) {
+                console.log(layer.getLatLng()); // access to the layer coordinates
+            });
         });
-      },
-      onEachFeature: function (feature, layer) {
-        layer.bindTooltip(layer.feature.properties.name);
 
-        layer.on('mouseover', function () {
-          // code goes in here
-          layer.setStyle({
-            fillColor: 'red'
-          });
+        map.on('click', function (e) {
+            console.log(e.latlng) // access to the click coordinates
+            subways.eachLayer(function (layer) {
+                console.log(layer); // access to the layer coordinates
+            });
         });
-        layer.on('mouseout', function () {
-          // code goes in here
-          layer.setStyle({
-            fillColor: '#613c33'
-          });
-        });
-      }
-    }).addTo(map);
-
-    // GeoJSon Layers
-    var sourcesLabels = {
-      "museums": museums,
-      "subways": subways
-    }
-
-    var sourcesLayers = {
-      "<b style='color:#613c33'>Museums</b>": museums,
-      "<b style='color:#0039A6'>Subways</b>": subways,
-    }
-
-    L.control.layers(null, sourcesLayers, {
-      collapsed: false
-    }).addTo(map);
-
-    // BEGIN WRITING YOUR SOLUTION CODE HERE
-    map.on('click', function (e) {
-      console.log(e.latlng) // access to the click coordinates
-      museums.eachLayer(function (layer) {
-        console.log(layer.getLatLng()); // access to the layer coordinates
-      });
-    });
-
-    map.on('click', function (e) {
-      console.log(e.latlng) // access to the click coordinates
-      subways.eachLayer(function (layer) {
-        console.log(layer); // access to the layer coordinates
-      });
-    });
-  </script>
+    </script>
 
 </body>
 
