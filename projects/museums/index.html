@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html>
+<!-- Use the HTML and CSS you developed in module 01 to fill out this template.-->
+
+<head>
+    <meta charset=utf-8 />
+    <title>Lab 05 Work Template</title>
+
+    <meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no' />
+    <link rel='icon' href='https://newmapsplus.github.io/favicon.ico' type='image/x-icon' />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.css" />
+
+    <!-- Add links to external css stylesheets. -->
+    <link href="https://fonts.googleapis.com/css?family=Libre+Franklin:300,900" rel="stylesheet" />
+
+    <!-- **************************************************************** -->
+    <!-- Check to make this links to the most current version of Leaflet! -->
+    <!-- **************************************************************** -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+    <!-- **************************************************************** -->
+
+    <style>
+        /* The map element */
+        #map {
+            width: 100%;
+            height: 500px;
+        }
+
+        /* Add HTML element styles */
+        body {
+            margin: 0;
+            padding: 0;
+            background: #ffffff;
+            font-family: "Libre Franklin";
+            font-weight: 300;
+            /* addition here */
+            color: #000000;
+            font-size: 100%;
+        }
+
+        section,
+        footer,
+        header {
+            width: 80%;
+            margin: 0 auto;
+        }
+
+        h1 {
+            font-family: "Libre Franklin";
+            font-size: 2.5em;
+            font-weight: 900;
+            /* addition here */
+            letter-spacing: 0.04em;
+            color: #000000
+        }
+
+        h2 {
+            font-family: "Libre Franklin";
+            font-size: 2.5em;
+            font-weight: 900;
+            /* addition here */
+            letter-spacing: 0.04em;
+            color: #000000
+        }
+
+        .caption {
+            margin: 0 0 20px 0;
+            display: block;
+        }
+
+        p {
+            font-size: 1.1em;
+            line-height: 1.5em;
+        }
+
+        a {
+            color: #005daa;
+            font-weight: bold;
+            text-decoration: none;
+        }
+
+        /* Change opacity on hover over the icon class */
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        .icon:hover {
+            opacity: .8;
+        }
+
+        /* Modify Leaflet's default popup style */
+
+        .leaflet-popup-content h3 {
+            font-family: "Libre Franklin";
+            font-size: 1.3em;
+            margin-bottom: 6px;
+        }
+
+        .leaflet-popup-content p {
+            margin: 3px 0 6px;
+            font-size: 1.1em;
+        }
+
+        .leaflet-popup-content a {
+            font-family: "Libre Franklin";
+            font-weight: normal;
+        }
+
+        @media screen and (max-width: 900px) {
+
+            .first-column,
+            .second-column {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>Places of interest (pois) in Washington DC </h1>
+    </header>
+
+    <section>
+        <div id='map'></div>
+    </section>
+
+    <section>
+
+        <p>Additional information about <a href="#">the data</a> and map goes here. </p>
+
+    </section>
+    <footer>
+        <p>Map authored by me, Mark Marji</p>
+        <hr>
+
+        <a href="https://newmapsplus.github.io">
+            <img src="https://newmapsplus.github.io/assets/graphics/logo-2018-nmp-75px-h-gray.png"
+                alt="University of Kentucky Geography">
+        </a>
+
+        <a href="https://uky-gis.github.io">
+            <img src="https://newmapsplus.github.io/assets/graphics/logo-2018-geography-75px-h.png"
+                alt="University of Kentucky Geography">
+        </a>
+
+    </footer>
+    <!-- **************************************************************** -->
+    <!-- Check to make this links to the most current version of Leaflet! -->
+    <!-- **************************************************************** -->
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <!-- **************************************************************** -->
+    <script>
+        // var map 
+        var map = L.map('map', {
+            center: [38.8928844, -77.0200985],
+            zoom: 14,
+        });
+
+        // Get basemap URL from Leaflet Providers
+        var basemap_url = 'https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png'
+
+        // Get basemap attributes from Leaflet Providers
+        var basemap_attributes = {
+            attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors &copy; <a href="https://carto.com/attributions">CARTO</a>',
+            subdomains: 'abcd',
+            maxZoom: 20
+        };
+        // requests some map tiles
+        var tiles = L.tileLayer(basemap_url, basemap_attributes);
+
+        map.addLayer(tiles);
+
+        // Begin writing/modifying code for Lab 05 here
+
+        var hotspots = [{
+            name: "National Gallery of Art",
+            properties: {
+                description: "A modern and contemporary art museum featuring sculptures and American & European artwork.",
+                coordinates: [38.891389, -77.02],
+                url: 'https://www.nga.gov/',
+                phone: '(202) 737-4215',
+                icon: '../svgs/museum-15.svg'
+            }
+        }, {
+            name: "National Air and Space Museum",
+            properties: {
+                description: "A museum dedicated to space exploration and human aircraft flights",
+                coordinates: [38.888, -77.02],
+                url: 'https://airandspace.si.edu/',
+                phone: '(202) 633-2214',
+                icon: '../svgs/museum-15.svg'
+            }
+        }, {
+            name: "National Museum of Natural History",
+            properties: {
+                description: "A natural history museum that displays dinosaur exhibits and displays of rare gems.",
+                coordinates: [38.8913, -77.0259],
+                url: 'https://naturalhistory.si.edu/',
+                phone: '(202) 633-1000',
+                icon: '../svgs/museum-15.svg'
+            }
+        }];
+
+        hotspots.push({
+            name: "Faro del Castillo San Felipe del Morro",
+            properties: {
+                description: "Castillo San Felipe del Morro, (El Morro) sits atop a high promontory overlooking the entrance to the San Juan Bay.",
+                coordinates: [18.4709031, -66.1234792],
+                url: 'https://www.nps.gov/saju/planyourvisit/index.htm',
+                phone: '(787) 729-6777',
+                icon: '../svgs/museum-15.svg'
+            }
+        })
+
+        // Create empty latLng bounds for zooming/centering map dynamically
+        var bounds = L.latLngBounds();
+
+        for (var i = 0; i < hotspots.length; i++) {
+            var props = hotspots[i].properties;
+            console.log(props);
+
+            // assign a string, wrapping the name of the place within two HTML bold tags
+            var popup = `<h3>${hotspots[i].name}</h3>
+             <p>${props.description}</p>
+             <p><b>website</b>: <a href='${props.url}'>${props.url}</a></p>
+             `
+
+            popup += props.phone ? `<p><b>phone</b>: ${props.phone}</p>` : "";
+
+            var icon = L.icon({
+                iconUrl: props.icon,
+                iconSize: [40, 40],
+                popupAnchor: [0, -22],
+                className: "icon"
+            });
+
+            var marker = L.marker(hotspots[i].properties.coordinates, {
+                icon: icon
+            })
+                .addTo(map)
+                .bindPopup(popup);
+
+            //  Extend the bounds as features are added
+            bounds.extend(hotspots[i].properties.coordinates)
+
+            marker.on("mouseover", function () {
+                this.openPopup();
+            });
+            marker.on("mouseout", function () {
+                this.closePopup();
+            });
+        }
+
+        // Fit map to the extent of hotspots
+        map.fitBounds(bounds);
+
+        // variable to reference the zero index
+        var i = 0;
+
+        console.log(props); // Object { ... }
+
+        console.log(props.description); // 
+
+        console.log(props.url); // 
+    </script>
+
+</body>
+
+</html>
