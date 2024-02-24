@@ -5,6 +5,11 @@ body {
     font-weight: 300;
 }
 
+header {
+    padding: 154px 0 100px;
+    background-color: #302B27;
+}
+
 .leaflet-container {
     font-family: "Work Sans", sans-serif;
     font-size: 0.9rem;
