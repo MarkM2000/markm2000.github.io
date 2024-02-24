@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html>
+<!-- Use the HTML and CSS you developed in module 01 to fill out this template.-->
+
+<head>
+  <meta charset=utf-8 />
+  <title>Lab 03 Work Template</title>
+  <meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no' />
+  <link rel='icon' href='https://newmapsplus.github.io/favicon.ico' type='image/x-icon' />
+
+  <!-- Add links to external css stylesheets. -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css" rel="stylesheet" />
+  <link href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css?family=Roboto:300,900" rel="stylesheet" />
+
+  <style>
+    /* Add custom styles. */
+
+    body {
+      margin: 0;
+      padding: 0;
+      background: #e3e3e6;
+      font-family: "Roboto", sans-serif;
+      font-weight: 300;
+      /* addition here */
+      color: #3d3d3d;
+      font-size: 100%;
+    }
+
+    section, header, footer {
+      width: 80%;
+      margin: 20px auto;
+    }
+
+    h1 {
+      font-family: "Roboto", sans-serif;
+      font-size: 2.5em;
+      font-weight: 900;
+      /* addition here */
+      letter-spacing: 0.04em;
+    }
+
+    h2 {
+      font-family: "Roboto", sans-serif;
+      font-size: 2.5em;
+      font-weight: 900;
+      /* addition here */
+      letter-spacing: 0.04em;
+    }
+
+    hr {
+      margin: 20px 0;
+      border: 0;
+      height: 1px;
+      background: #d3d3d3;
+    }
+
+    .caption {
+      margin: 0 0 20px 0;
+      display: block;
+    }
+
+    p {
+      font-size: 1.1em;
+      line-height: 1.5em;
+    }
+
+    a {
+      color: #005daa;
+      font-weight: bold;
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    ul {
+      padding-left: 20px;
+    }
+
+    li {
+      margin: 10px 0;
+    }
+
+    #map {
+      width: 100%;
+      height: 60vh;
+    }
+
+    .highlight {
+      color: #e81b39;
+      font-weight: bold;
+    }
+
+    .img-fill {
+      width: 100%;
+      height: auto;
+      margin: 10px 0;
+    }
+
+    /* Use float property to make two-column layout */
+    .first-column {
+      float: left;
+      width: 49%;
+      padding-right: 2%;
+    }
+
+    .second-column {
+      float: left;
+      width: 49%;
+    }
+
+    /* Clear floats after columns */
+    .row::after {
+      content: "";
+      display: block;
+      clear: both;
+    }
+
+    .leaflet-container {
+      font-family: "Roboto", sans-serif;
+      font-weight: 300;
+    }
+
+    .leaflet-container b {
+      font-weight: 900;
+    }
+
+    @media screen and (max-width: 900px) {
+
+      .first-column,
+      .second-column {
+        width: 100%;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <header>
+    <!-- Add header information -->
+  </header>
+  <section>
+    <div id="map"></div>
+    <!-- Add map and body content -->
+    <h2>An exploration of state capitals and city population patterns</h2>
+
+    <p>This map demonstrates using JavaScript to place map markers with tooltips (or popups) with meaningful information
+      using array data structures, for loops, and if/else statements.</p>
+
+    <p>Map authored by me, Mark Marji</p>
+  </section>
+  <footer>
+    <!-- Add footer information -->
+  </footer>
+
+  <!-- Add link to Leaflet JavaScript library. -->
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+
+  <!-- Custom JavaScript -->
+  <script>
+    // initial map options
+    var options = {
+      center: [0, 0],
+      zoom: 2
+    }
+
+    // instantiate Leaflet map object
+    var map = L.map('map', options);
+
+    // Get basemap URL from Leaflet Providers
+    var basemap_url = 'http://server.arcgisonline.com/ArcGIS/rest/services/World_Street_Map/MapServer/tile/{z}/{y}/{x}'
+
+    // Get basemap attributes from Leaflet Providers
+    var basemap_attributes = {
+      attribution: 'Tiles &copy; Esri &mdash; Source: Esri, DeLorme, NAVTEQ, USGS, Intermap, iPC, NRCAN, Esri Japan, METI, Esri China (Hong Kong), Esri (Thailand), TomTom, 2012'
+    }
+
+    // Add tileset as a layer in our map
+    var tiles = L.tileLayer(basemap_url, basemap_attributes);
+
+    // Add tiles to map
+    map.addLayer(tiles);
+
+    // variable to hold string value of city name
+    var CityCoords = [[38.904722, -77.016389], [21.306944, -157.858333], [40.941389, -73.864444]]
+
+    // var city variables  
+    var cities = ["Washington DC", "Honolulu", "Yonkers"];
+    console.log(cities); // also outputs to ["Washington DC", "Honolulu", "Yonkers"]
+
+    // City capital array
+    var cityCapitals = [true, true, false]
+    var cityPops = [631693, 912421, 206680]
+
+    for (var i = 0; i < cities.length; i++) {
+      console.log(i); // output the current value of i
+      console.log(cities[i]); // use i to access an index of the Array
+      console.log(CityCoords[i]); // console the CityCoords for each city
+      console.log(cityPops[i]); // console the population for each city
+      console.log(cityCapitals[i]); // console CityCapitals
+      console.log(`${cities[i]} has a population of ${cityPops[i]}`);
+      let popup = `${cities[i]}: ${cityPops[i].toLocaleString()}`;
+      if (cityCapitals[i] == true) {
+        popup += `<br>It is a capital city.`;
+      } else {
+        popup += `<br>It is not a capital city.`;
+      }
+      // create the Leaflet marker using the coordinates
+      L.marker(CityCoords[i], {
+      })
+        .addTo(map) // add it to the map
+        .bindPopup(popup); // bind the Popup
+    }
+  </script>
+
+</body>
