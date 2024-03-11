@@ -234,6 +234,13 @@
 
             //  Extend the bounds as features are added
             bounds.extend(hotspots[i].properties.coordinates)
+
+            marker.on("mouseover", function () {
+                this.openPopup();
+            });
+            marker.on("mouseout", function () {
+                this.closePopup();
+            });
         }
 
         // Fit map to the extent of hotspots
