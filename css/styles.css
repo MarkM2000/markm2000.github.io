@@ -3,11 +3,13 @@ body {
     font-size: 1.1rem;
     line-height: 1.8rem;
     font-weight: 300;
+    background: #f8fafc;
+    color: #1e293b;
 }
 
 header {
     padding: 154px 0 100px;
-    background-color: #ffffff;
+    background-color: #f8fafc;
 }
 
 .leaflet-container {
