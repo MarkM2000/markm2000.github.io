@@ -2,367 +2,429 @@
 <html lang="en">
 
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Mark Marji Digital Mapping Portfolio</title>
-  <link href="/vendor/bootstrap.min.css" rel="stylesheet" />
-  <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@300;700&display=swap" rel="stylesheet" />
-  <link href="/css/styles.css" rel="stylesheet" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mark Marji | GIS & Digital Mapping Portfolio</title>
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+  <link rel="stylesheet" href="css/styles.css">
 </head>
 
-<body>
+<body id="page-top">
 
-  <body id="page-top">
-    <!-- Navigation -->
+  <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm sticky-top">
     <div class="container">
-      <header class="d-flex flex-wrap justify-content-center py-3 mb-4 border-bottom">
-        <a href="#https://markm2000.github.io/"
-          class="d-flex align-items-center mb-3 mb-md-0 me-md-auto link-body-emphasis text-decoration-none">
-          <svg class="bi me-2" width="40" height="32">
-            <use xlink:href="#bootstrap" />
-          </svg>
-          <span class="fs-4 bg-light">Portfolio</span>
-        </a>
+      <a class="navbar-brand fw-bold" href="#">
+        Mark Marji
+      </a>
 
-        <ul class="nav nav-pills">
-          <li class="nav-item"><a href="#projects" class="nav-link">Projects</a></li>
-          <li class="nav-item"><a href="#about" class="nav-link">About</a></li>
-          <li class="nav-item"><a href="https://www.behance.net/markmarji" class="nav-link">Behance</a></li>
-          <li class="nav-item"><a href="https://markmarjidesignportfolio.weebly.com/" class="nav-link">Digital Media Projects</a></li>
-          <li class="nav-item"><a href="https://markphotographyportfolio.mypixieset.com" class="nav-link">Photography</a></li>
-          <li class="nav-item"><a href="#contact" class="nav-link">Contact</a></li>
-        </ul>
-      </header>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="nav nav-pills" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="#about">About</a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" href="#projects">Projects</a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" href="#pdf-projects">PDF Maps</a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" href="#contact">Contact</a>
+          </li>
+      </div>
     </div>
+  </nav>
 
-    <!-- About Section -->
-    <section id="about">
-      <div class="container">
-        <div class="row">
-          <div class="col-lg-12 mx-auto">
-            <h2>About me</h2>
-            <div class="my-5 clearfix">
-              <p class="lead">My name is Mark Marji. I graduated from the University of Kentucky with my Masters degree in Applied Environmental and Sustainability Science (Applied ENS) and did an internship with the Linguistic Atlas Project while completing my Masters. In March 2024, I received my graduate degree in digital mapping. Additionally, I earned a Bachelor of Science in Digital Media and Design in 2022.</p>
+  <header class="bg-light py-5">
+    <div class="container text-center">
+      <h1 class="display-4 fw-bold">
+        GIS & Digital Mapping Portfolio
+      </h1>
+
+      <p class="lead">
+        Applied Environmental & Sustainability Science |
+        Digital Mapping |
+        GIS Analysis
+      </p>
+    </div>
+  </header>
+
+  <section id="about" class="py-5">
+    <div class="container">
+      <h2 class="mb-4">About Me</h2>
+
+      <p class="lead">
+        My name is Mark Marji. I earned a Master's degree in
+        Applied Environmental and Sustainability Science from
+        the University of Kentucky and completed a graduate
+        certificate in Digital Mapping.
+      </p>
+
+      <div class="row mt-5">
+
+        <div class="col-md-4">
+          <h4>GIS</h4>
+          <p>
+            Experience with QGIS, coordinate systems,
+            projections, cartography, and spatial analysis.
+          </p>
+        </div>
+
+        <div class="col-md-4">
+          <h4>ArcGIS</h4>
+          <p>
+            ArcGIS Pro, ArcGIS Online, spatial modeling,
+            visualization, and data-driven mapping.
+          </p>
+        </div>
+
+        <div class="col-md-4">
+          <h4>Web Mapping</h4>
+          <p>
+            JavaScript, GitHub Pages, Mapbox, Leaflet,
+            HTML, CSS, and interactive GIS applications.
+          </p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- GitHub Projects Section -->
+  <section id="projects" class="bg-light">
+    <div class="container">
+
+      <div class="row">
+        <h1 class="mb-4">GitHub Projects</h1>
+
+        <!-- Project 1 -->
+        <div class="col-lg-4 col-sm-6 portfolio-item">
+          <div class="card h-100">
+            <a href="https://markm2000.github.io/Final-Project/">
+              <img class="card-img-top"
+                src="https://markm2000.github.io/Final-Project/Screenshots/final_project_map.jpg"
+                alt="Hawaii Lava Flow Project">
+            </a>
+            <div class="card-body">
+              <h4 class="card-title">
+                <a href="https://markm2000.github.io/Final-Project/">Hawaii Lava Flow Project</a>
+              </h4>
+              <p class="card-text">
+                Volcano lava flow hazard mapping with road impact analysis.
+              </p>
             </div>
           </div>
         </div>
-        <div class="row">
-          <div class="col-md-6">
-            <h3>Skills</h3>
-            <ul class="list-unstyled">
-              <li>
-                <strong>GIS</strong>
-                <p>I have experience in operating and creating GIS maps using the QGIS program. I'm also skilled in changing the projection of the map along with the CRS (coordinate reference system).</p>
-              </li>
-              <li>
-                <strong>Coding</strong>
-                <p>I have experience in coding with the use of GitHub. I have knowledge in using the VS Code to create an index and the GitHub Desktop to save what I have done. I have also learned how to do a JavaScript and CSS file by using the VS Code.</p>
-              </li>
-              <li>
-                <strong>ArcGIS</strong>
-                <p>I gained a hands-on experience with ArcGIS and ArcGIS Pro, utilizing its tools for spatial analysis, data visualization, and mapping. I used ArcGIS to create impactful geospatial outputs, such as detailed maps, choropleth maps, and spatial models to support data-driven insights and decision-making.</p>
-              </li>
-            </ul>
-          </div>
-    </section>
-    <!-- GitHub Projects Section -->
-    <section id="projects" class="bg-light">
-      <div class="container">
-        <div class="row">
-          <h1>GitHub Projects</h1>
-          <div class="col-lg-4 col-sm-6 portfolio-item">
-            <div class="card h-100">
-              <a href="https://markm2000.github.io/Final-Project/"><img class="card-img-top"
-                  src="https://markm2000.github.io/Final-Project/Screenshots/final_project_map.jpg" alt="" /></a>
-              <div class="card-body">
-                <h4 class="card-title">
-                  <a href="https://markm2000.github.io/Final-Project/">Hawaii Lava Flow Project</a>
-                </h4>
-                <p class="card-text">This map focuses on the volcano lava flow hazard locations which involves the roads in each area. It showcases which area has the most hazard and how it affects the roads. This <a href="https://markm2000.github.io/Final-Project">link</a> shows the steps on how this project was done.</p>
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-4 col-sm-6 portfolio-item">
-            <div class="card h-100">
-              <a href="https://markm2000.github.io/projects/museums/"><img class="card-img-top"
-                  src="/img/POI-DC-Screenshot.png " alt="" /></a>
-              <div class="card-body">
-                <h4 class="card-title">
-                  <a href="https://markm2000.github.io/projects/museums/">Places of Interest In DC</a>
-                </h4>
-                <p class="card-text">This map shows some of the museums located in Washington DC. There are several other museums located in the area (for a complete list, see <a href="https://washington.org/visit-dc/discover-dc-museums">here</a>).</p>
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-4 col-sm-6 portfolio-item">
-            <div class="card h-100">
-              <a
-                href="https://api.mapbox.com/styles/v1/markm00/cls3luub9021l01p26oz7driz.html?title=view&access_token=pk.eyJ1IjoibWFya20wMCIsImEiOiJjbW11MHJsenUwMjBpMnhxNGtlcmgxeTBwIn0.HrX1j2aYi3RnMGoLXLc4Uw&zoomwheel=true&fresh=true#5.88/0.123/37.916"><img class="card-img-top" src="/img/kenya-map-screenshot.png" alt="" /></a>
-              <div class="card-body">
-                <h4 class="card-title">
-                  <a href="https://api.mapbox.com/styles/v1/markm00/cls3luub9021l01p26oz7driz.html?title=view&access_token=pk.eyJ1IjoibWFya20wMCIsImEiOiJjbW11MHJsenUwMjBpMnhxNGtlcmgxeTBwIn0.HrX1j2aYi3RnMGoLXLc4Uw&zoomwheel=true&fresh=true#5.88/0.123/37.916">Kenya Mapbox</a>
-                </h4>
-                <p class="card-text">This is a Monochrome mapbox that shows a map of Kenya. This was used for two modules for MAP 673 (<a href="https://github.com/newmapsplus/map673-mod-04-MarkM2000/blob/master/assignment/index.html">Module 4</a> and <a href="https://github.com/newmapsplus/map673-mod-05-MarkM2000/blob/master/assignment/index.html">Module 5</a>). Features of this map include administrative boundaries, greenspace, place labels, and water.</p>
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-4 col-sm-6 portfolio-item">
-            <div class="card h-100">
-              <a href="https://markm2000.github.io/projects/nyc/"><img class="card-img-top"
-                  src="/img/nyc-subway-map.png" alt="" /></a>
-              <div class="card-body">
-                <h4 class="card-title">
-                  <a href="https://markm2000.github.io/projects/nyc/">NYC Subway Museum Map</a>
-                </h4>
-                <p class="card-text">A map that shows the museums around the New York City area and which subway lines are best used to get to whichever specific museum. This is the final project I did for MAP 672.</p>
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-4 col-sm-6 portfolio-item">
-            <div class="card h-100">
-              <a href="https://markm2000.github.io/projects/javascript/"><img class="card-img-top" src="/img/placemark-screenshot.png" alt="" /></a>
-              <div class="card-body">
-                <h4 class="card-title">
-                  <a href="https://markm2000.github.io/projects/javascript/">JavaScript Placemark Map </a>
-                </h4>
-                <p class="card-text">This map demonstrates using JavaScript to place map markers with tooltips (or popups) with meaningful information using array data structures, for loops, and if/else statements.
-                </p>
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-4 col-sm-6 portfolio-item">
-            <div class="card h-100">
-              <a href="https://markm2000.github.io/projects/waihonu/"><img class="card-img-top" src="/img/solar-production-oahu.png" alt="" /></a>
-              <div class="card-body">
-                <h4 class="card-title">
-                  <a href="https://markm2000.github.io/projects/waihonu/">Waihou Solar Power Plants</a>
-                </h4>
-                <p class="card-text">This map focuses on the solar energy production in Hawaii and is mainly centered around the Oahu area of Waihonu. The map features two solar panels, the Waihonu North Solar and Waihonu South Solar.</p>
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-4 col-sm-6 portfolio-item">
-            <div class="card h-100">
-              <a href="https://github.com/MarkM2000/Final-Project-MAP673"><img class="card-img-top" src="/img/outer-banks.png" alt="" /></a>
-              <div class="card-body">
-                <h4 class="card-title">
-                  <a href="https://github.com/MarkM2000/Final-Project-MAP673">Outer Banks Project</a>
-                </h4>
-                <p class="card-text">This map is the my final project for MAP 673. This final project focuses on the Outer Banks and includes the use of SVG icons to represent the attractions and three data sources that serves as a guide to this.</p>
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-4 col-sm-6 portfolio-item">
-            <div class="card h-100">
-              <a href="https://markm2000.github.io/Final-Project-MAP674/"><img class="card-img-top" src="/img/australia-red-map.png" alt="" /></a>
-              <div class="card-body">
-                <h4 class="card-title">
-                  <a href="https://markm2000.github.io/Final-Project-MAP674/">Electricity Consumption Sectors of Sydney</a>
-                </h4>
-                <p class="card-text">This is the final project for MAP 674. It focuses on Australia, especially the Electricity Consumption Sectors of Sydney. It focuses on the use of Jupyter Notebook files that are used to create the project. This is <a href="https://github.com/MarkM2000/Final-Project-MAP674">the link</a> to where the Python files are located.</p>
-              </div>
-            </div>
-          </div>
-          <h1>Linguistic Atlas Project Internship Work</h1>
-          <div class="col-lg-4 col-sm-6 portfolio-item">
-            <div class="card h-100">
-              <a href="https://markm2000.github.io/Informant_Map_Version1/"><img class="card-img-top"
-                  src="/img/Informant_Map_Version_1_Screenshot.jpg" alt="" /></a>
-              <div class="card-body">
-                <h4 class="card-title">
-                  <a href="https://markm2000.github.io/Informant_Map_Version1/">Informant Map Version 1</a>
-                </h4>
-                <p class="card-text">This map features coordinates and is version 1 of the informant map, which is part of the LAMSAS project internship, which is called the <a href="https://linguisticatlasproject.org">Linguistic Atlas Project</a></li>.</p>
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-4 col-sm-6 portfolio-item">
-            <div class="card h-100">
-              <a href="https://markm2000.github.io/Informant_Map_Version2/"><img class="card-img-top"
-                  src="/img/Informant_Version_Map_2.png" alt="" /></a>
-              <div class="card-body">
-                <h4 class="card-title">
-                  <a href="https://markm2000.github.io/Informant_Map_Version2/">Informant Map Version 2</a>
-                </h4>
-                <p class="card-text">This map includes information about the informant number and a job icon. Sex, ethnicity, educational attainment, occupation, and fieldworker year of interview will all be included in the information.</p>
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-4 col-sm-6 portfolio-item">
-            <div class="card h-100">
-              <a href="https://markm2000.github.io/Informant_Map_Version3/"><img class="card-img-top"
-                  src="/img/Informant_Map_Version_3.png" alt="" /></a>
-              <div class="card-body">
-                <h4 class="card-title">
-                  <a href="https://markm2000.github.io/Informant_Map_Version3/">Informant Map Version 3</a>
-                </h4>
-                <p class="card-text">This is Version 3 of the Informant Map of the Linguistic Atlas Project, which contains checkboxes of different attics.</p>
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-4 col-sm-6 portfolio-item">
-            <div class="card h-100">
-              <a href="https://markm2000.github.io/PokeSackTotal/"><img class="card-img-top"
-                  src="/img/PokeTotal_Pokesacktotal.jpg" alt="" /></a>
-              <div class="card-body">
-                <h4 class="card-title">
-                  <a href="https://markm2000.github.io/PokeSackTotal/">PokeSackTotal</a>
-                </h4>
-                <p class="card-text">This map consists of several files of different types of bags. They include pokes (found commonly in appalachia United States), sacks, and bags.</p>
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-4 col-sm-6 portfolio-item">
-            <div class="card h-100">
-              <a href="https://markm2000.github.io/Weather-Map/"><img class="card-img-top"
-                  src="/img/Weather_Map_Screenshot.jpg" alt="" /></a>
-              <div class="card-body">
-                <h4 class="card-title">
-                  <a href="https://markm2000.github.io/Weather-Map/">Weather Map</a>
-                </h4>
-                <p class="card-text">This map consists of choropleth maps focusing on the weather.</p>
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-4 col-sm-6 portfolio-item">
-            <div class="card h-100">
-              <a href="https://markm2000.github.io/LAP-Attics-Mantels/"><img class="card-img-top"
-                  src="/img/LAP-Attics-Mantels-Attic-Total.jpg" alt="" /></a>
-              <div class="card-body">
-                <h4 class="card-title">
-                  <a href="https://markm2000.github.io/LAP-Attics-Mantels/">LAP-Attics-Mantels Map</a>
-                </h4>
-                <p class="card-text">This map consists of choropleth maps focusing on attics and mantels.</p>
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-4 col-sm-6 portfolio-item">
-            <div class="card h-100">
-              <a href="https://markm2000.github.io/Faucet-Parlor-Map/"><img class="card-img-top"
-                  src="/img/Faucet-Parlor-Map.png" alt="" /></a>
-              <div class="card-body">
-                <h4 class="card-title">
-                  <a href="https://markm2000.github.io/Faucet-Parlor-Map/">Faucet-Parlor Map</a>
-                </h4>
-                <p class="card-text">This map consists of checkboxes maps focusing on faucets, parlors, cornbreads, and sweet corn.</p>
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-4 col-sm-6 portfolio-item">
-            <div class="card h-100">
-              <a href="https://markm2000.github.io/Living-Room-Dresser-Map/"><img class="card-img-top"
-                  src="/img/best_room_living_room_dresser_map.png" alt="" /></a>
-              <div class="card-body">
-                <h4 class="card-title">
-                  <a href="https://markm2000.github.io/Living-Room-Dresser-Map/">Living-Room-Dresser-Map</a>
-                </h4>
-                <p class="card-text">A series of maps that consists of living room and dresser total.</p>
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-4 col-sm-6 portfolio-item">
-            <div class="card h-100">
-              <a href="https://markm2000.github.io/PorchMap10.8/"><img class="card-img-top"
-                  src="/img/L-shaped_porch.jpg" alt="" /></a>
-              <div class="card-body">
-                <h4 class="card-title">
-                  <a href="https://markm2000.github.io/PorchMap10.8/">PorchMap 10.8</a>
-                </h4>
-                <p class="card-text">This map contains choroplethmaps of different porches such as l-shaped porches, screened-in porches, back porches, balcony total, wraparound porches, walkout total, and gallery total.</p>
-              </div>
-            </div>
-          </div>
-    </section>
 
-    <section id="PDF Projects" class="">
-      <div class="container">
-        <div class="row">
-          <div class="col-lg-4 col-sm-6 portfolio-item">
-            <h4>PDF Projects</h4>
-            <ul class="list-unstyled">
-              <li class="">
-                <p><a href="pdfs/Ancient cities in Africa.pdf">Ancient cities in Africa</a></p>
-              </li>
-              <li class="">
-                <p><a href="pdfs/Downtown Singapore.pdf">Downtown Singapore Tourism</a></p>
-              </li>
-              <li class="">
-                <p><a href="pdfs/Durham County Layout.pdf">Downtown Singapore Tourism</a></p>
-              </li>
-              <li class="">
-                <p><a href="pdfs/EV Charging Stations.pdf">EV Charging Stations</a></p>
-              </li>
-              <li class="">
-                <p><a href="pdfs/EV Registration Map.pdf">EV Registration Map</a></p>
-              </li>
-              <li class="">
-                <p><a href="pdfs/FloodAreas.pdf">FloodAreas (fixed)</a></p>
-              </li>
-              <li class="">
-                <p><a href="pdfs/IndonesiaPopulation.pdf">Indonesia Population</a></p>
-              </li>
-              <li class="">
-                <p><a href="pdfs/Istanbul_Attractions.pdf">Istanbul Attractions</a></p>
-              </li>
-              <li class="">
-                <p><a href="pdfs/Mark Marji GEO 109 Final Project.pptx">Orlando QGIS PowerPoint Project</a></p>
-              </li>
-              <li class="">
-                <p><a href="pdfs/South Africa.pdf">South Africa</a></p>
-              </li>
-              <li class="">
-                <p><a href="pdfs/Tactile Map.pdf">Tactile Map</a></p>
-              </li>
-              <li class="">
-                <p><a href="pdfs/Honduras Ecoregions.pdf">Honduras Ecoregions</a></p>
-              </li>
-            </ul>
+        <!-- Project 2 -->
+        <div class="col-lg-4 col-sm-6 portfolio-item">
+          <div class="card h-100">
+            <a href="https://markm2000.github.io/projects/museums/">
+              <img class="card-img-top" src="/img/POI-DC-Screenshot.png" alt="DC Museums Map">
+            </a>
+            <div class="card-body">
+              <h4 class="card-title">
+                <a href="https://markm2000.github.io/projects/museums/">Places of Interest in DC</a>
+              </h4>
+              <p class="card-text">
+                Museums and cultural sites in Washington DC with spatial context.
+              </p>
+            </div>
           </div>
-    </section>
+        </div>
 
-    <!-- Contacts Section -->
-    <section id="contact" class="">
-      <div class="container">
-        <div class="row">
-          <div class="col-lg-4 col-sm-6 portfolio-item">
-            <h4>Contacts</h4>
-            <ul class="list-unstyled">
-              <li class="mr-2">
-                <i class="fa fa-github me-2"></i><a href="https://github.com/MarkM2000">Newmapsplus</a>
-              </li>
-              <li class="mr-2">
-                <i class="fa fa-github me-2"></i><a href="https://www.arcgis.com/home/search.html?restrict=false&sortField=relevance&sortOrder=desc&searchTerm=owner%3A%22mhma234%40uky.edu_UKY_EDU%22#content">ArcGIS Online Work</a>
-              </li>
-              <li class="mr-2">
-                <i class="fa fa-github me-2"></i><a href="documents/Mark_Marji_Resume.pdf">Resume</a>
-              </li>
-              <li class="mr-2">
-                <i class="fa fa-github me-2"></i><a href="documents/Mark Marji_LoR.pdf">Internship LOR</a>
-              </li>
-              <li class="mr-2">
-                <i class="fa fa-github me-2"></i><a href="documents/LOR_Mark Marji.pdf">Rave On Sports LOR</a>
-              </li>
-              <li class="mr-2">
-                <i class="fa fa-weebly me-2"></i><a href="https://markmarjidesignportfolio.weebly.com/">Digital Media Portfolio</a>
-              </li>
-              <li class="mr-2">
-                <i class="fa fa-behance me-2"></i><a href="https://www.behance.net/markmarji">Behance</a>
-              </li>
-            </ul>
+        <!-- Project 3 -->
+        <div class="col-lg-4 col-sm-6 portfolio-item">
+          <div class="card h-100">
+            <a href="https://api.mapbox.com/styles/v1/markm00/cls3luub9021l01p26oz7driz.html">
+              <img class="card-img-top" src="/img/kenya-map-screenshot.png" alt="Kenya Mapbox">
+            </a>
+            <div class="card-body">
+              <h4 class="card-title">
+                <a href="https://api.mapbox.com/styles/v1/markm00/cls3luub9021l01p26oz7driz.html">Kenya Mapbox</a>
+              </h4>
+              <p class="card-text">
+                Monochrome basemap of Kenya created using Mapbox styles.
+              </p>
+            </div>
           </div>
-    </section>
+        </div>
 
-    <!-- Footer -->
-    <footer class="py-5 bg-dark">
-      <div class="container">
-        <p class="m-0 text-center text-white">Copyright &copy; My Portfolio | New Maps Plus</p>
+        <!-- Project 4 -->
+        <div class="col-lg-4 col-sm-6 portfolio-item">
+          <div class="card h-100">
+            <a href="https://markm2000.github.io/projects/nyc/">
+              <img class="card-img-top" src="/img/nyc-subway-map.png" alt="NYC Subway Map">
+            </a>
+            <div class="card-body">
+              <h4 class="card-title">
+                <a href="https://markm2000.github.io/projects/nyc/">NYC Subway Museum Map</a>
+              </h4>
+              <p class="card-text">
+                Museums in NYC with subway routing context.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 5 -->
+        <div class="col-lg-4 col-sm-6 portfolio-item">
+          <div class="card h-100">
+            <a href="https://markm2000.github.io/projects/javascript/">
+              <img class="card-img-top" src="/img/placemark-screenshot.png" alt="JavaScript Map">
+            </a>
+            <div class="card-body">
+              <h4 class="card-title">
+                <a href="https://markm2000.github.io/projects/javascript/">JavaScript Placemark Map</a>
+              </h4>
+              <p class="card-text">
+                Interactive map using JavaScript arrays, loops, and popups.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 6 -->
+        <div class="col-lg-4 col-sm-6 portfolio-item">
+          <div class="card h-100">
+            <a href="https://markm2000.github.io/projects/waihonu/">
+              <img class="card-img-top" src="/img/solar-production-oahu.png" alt="Solar Map">
+            </a>
+            <div class="card-body">
+              <h4 class="card-title">
+                <a href="https://markm2000.github.io/projects/waihonu/">Waihou Solar Power Plants</a>
+              </h4>
+              <p class="card-text">
+                Solar energy production mapping in Oahu, Hawaii.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 7 -->
+        <div class="col-lg-4 col-sm-6 portfolio-item">
+          <div class="card h-100">
+            <a href="https://github.com/MarkM2000/Final-Project-MAP673">
+              <img class="card-img-top" src="/img/outer-banks.png" alt="Outer Banks Project">
+            </a>
+            <div class="card-body">
+              <h4 class="card-title">
+                <a href="https://github.com/MarkM2000/Final-Project-MAP673">Outer Banks Project</a>
+              </h4>
+              <p class="card-text">
+                SVG-based attraction mapping of the Outer Banks region.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 8 -->
+        <div class="col-lg-4 col-sm-6 portfolio-item">
+          <div class="card h-100">
+            <a href="https://markm2000.github.io/Final-Project-MAP674/">
+              <img class="card-img-top" src="/img/australia-red-map.png" alt="Sydney Energy Map">
+            </a>
+            <div class="card-body">
+              <h4 class="card-title">
+                <a href="https://markm2000.github.io/Final-Project-MAP674/">Sydney Energy Consumption</a>
+              </h4>
+              <p class="card-text">
+                Python + Jupyter Notebook workflow for spatial energy analysis.
+              </p>
+            </div>
+          </div>
+        </div>
       </div>
-    </footer>
 
-    <!-- Bootstrap JavaScript -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
-      crossorigin="anonymous"></script>
-  </body>
+      <!-- Linguistic Atlas Projects -->
+      <div class="row mt-5">
+        <h1 class="mb-4">Linguistic Atlas Project Internship Work</h1>
+
+        <!-- V1 -->
+        <div class="col-lg-4 col-sm-6 portfolio-item">
+          <div class="card h-100">
+            <a href="https://markm2000.github.io/Informant_Map_Version1/">
+              <img class="card-img-top" src="/img/Informant_Map_Version_1_Screenshot.jpg" alt="">
+            </a>
+            <div class="card-body">
+              <h4 class="card-title">
+                <a href="https://markm2000.github.io/Informant_Map_Version1/">Informant Map Version 1</a>
+              </h4>
+              <p class="card-text">Coordinate-based informant mapping (LAMSAS project).</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- V2 -->
+        <div class="col-lg-4 col-sm-6 portfolio-item">
+          <div class="card h-100">
+            <a href="https://markm2000.github.io/Informant_Map_Version2/">
+              <img class="card-img-top" src="/img/Informant_Version_Map_2.png" alt="">
+            </a>
+            <div class="card-body">
+              <h4 class="card-title">
+                <a href="https://markm2000.github.io/Informant_Map_Version2/">Informant Map Version 2</a>
+              </h4>
+              <p class="card-text">
+                Attribute-enhanced informant mapping (demographics & occupation data).
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- V3 -->
+        <div class="col-lg-4 col-sm-6 portfolio-item">
+          <div class="card h-100">
+            <a href="https://markm2000.github.io/Informant_Map_Version3/">
+              <img class="card-img-top" src="/img/Informant_Map_Version_3.png" alt="">
+            </a>
+            <div class="card-body">
+              <h4 class="card-title">
+                <a href="https://markm2000.github.io/Informant_Map_Version3/">Informant Map Version 3</a>
+              </h4>
+              <p class="card-text">
+                Interactive checkbox filtering for linguistic atlas datasets.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- PokeSack -->
+        <div class="col-lg-4 col-sm-6 portfolio-item">
+          <div class="card h-100">
+            <a href="https://markm2000.github.io/PokeSackTotal/">
+              <img class="card-img-top" src="/img/PokeTotal_Pokesacktotal.jpg" alt="">
+            </a>
+            <div class="card-body">
+              <h4 class="card-title">
+                <a href="https://markm2000.github.io/PokeSackTotal/">PokeSackTotal</a>
+              </h4>
+              <p class="card-text">
+                Linguistic variation mapping of regional terminology.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Weather -->
+        <div class="col-lg-4 col-sm-6 portfolio-item">
+          <div class="card h-100">
+            <a href="https://markm2000.github.io/Weather-Map/">
+              <img class="card-img-top" src="/img/Weather_Map_Screenshot.jpg" alt="">
+            </a>
+            <div class="card-body">
+              <h4 class="card-title">
+                <a href="https://markm2000.github.io/Weather-Map/">Weather Map</a>
+              </h4>
+              <p class="card-text">Choropleth mapping of weather patterns.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Add more if needed -->
+      </div>
+
+    </div>
+  </section>
+
+  <section id="pdf-projects" class="py-5">
+    <div class="container">
+      <h2 class="mb-4">PDF Cartography Projects</h2>
+      <div class="row">
+        <div class="col-md-6">
+          <ul class="list-group">
+            <li class="list-group-item">
+              <a href="pdfs/Ancient cities in Africa.pdf">
+                Ancient Cities in Africa
+              </a>
+            </li>
+
+            <li class="list-group-item">
+              <a href="pdfs/IndonesiaPopulation.pdf">
+                Indonesia Population
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" class="py-5 bg-light">
+    <div class="container">
+
+      <h2>Contact</h2>
+
+      <div class="row mt-4">
+
+        <div class="col-md-6">
+          <ul class="list-unstyled">
+            <li class="mb-2">
+              <i class="fab fa-github"></i>
+              <a href="https://github.com/MarkM2000">GitHub</a>
+            </li>
+
+            <li class="mb-2">
+              <i class="fab fa-behance"></i>
+              <a href="https://www.behance.net/markmarji">Behance</a>
+            </li>
+
+            <li class="mb-2">
+              <i class="fa fa-globe me-2"></i>
+              <a
+                href="https://www.arcgis.com/home/search.html?restrict=false&sortField=relevance&sortOrder=desc&searchTerm=owner%3A%22mhma234%40uky.edu_UKY_EDU%22#content">
+                ArcGIS Online
+              </a>
+            </li>
+
+            <li class="mr-2">
+              <i class="fa fa-weebly me-2"></i>
+              <a href="https://markmarjidesignportfolio.weebly.com" target="_blank">
+                Digital Media Portfolio
+              </a>
+            </li>
+
+            <li class="mr-2">
+              <i class="fa fa-camera me-2"></i>
+              <a href="https://markphotographyportfolio.mypixieset.com/" target="_blank">
+                Photography Portfolio
+              </a>
+            </li>
+
+            <li class="mb-2">
+              <i class="fas fa-file-pdf"></i>
+              <a href="documents/Mark_Marji_Resume.pdf">
+                Resume
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <footer class="bg-dark text-white py-4">
+    <div class="container text-center">
+      © 2026 Mark Marji Portfolio
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
 
 </html>
